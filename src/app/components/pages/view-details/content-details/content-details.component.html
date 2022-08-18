@@ -1,0 +1,620 @@
+<div class="container-details mt-3">
+    <div class="row">
+        <div class="col-12 col-title">
+            <h1>Información de luminaria </h1>
+            <button mat-icon-button
+            [matTooltip]="'Editar'"
+            (click)="changeEditBtn()"
+            *ngIf="editFormFlag">
+                <mat-icon class="example-tab-icon">edit</mat-icon>
+            </button>
+        </div>
+        <div class="col-12 col-container">
+            <form #form="ngForm" class="form-section">
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>ID Luminaria</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.id_luminaria"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>ID Circuito</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.id_circuito"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Circuito</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.circuito"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>ID Centro Mando</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.id_centro_mando"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Centro Mando</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.centro_mando"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Observaciones</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.observaciones"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Punto Luz</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.punto_luz"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Vial</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.vial"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Número</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.numero"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Lado Vía</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.lado_via"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Distancia Eje</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.distancia_eje"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>S1</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.s1"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>S2</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.s2"
+                        [required]="true"
+                        matInput=""
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Operativa</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.operativa"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Altura</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.altura"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Tipo Soporte</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.tipo_soporte"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Marca Soporte</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.marca_soporte"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Modelo Soporte</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.modelo_soporte"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Estado Soporte</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.estado_soporte"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Situación Soporte</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.situacion_soporte"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Tamaño Brazo</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.tamano_brazo"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Longitud Brazo</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.longitud_brazo"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Orientación Brazo</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.orientacion_brazo"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Tipo Luminaria</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.tipo_luminaria"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Marca Luminaria</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.marca_luminaria"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Modelo Luminaria</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.modelo_luminaria"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Estado Luminaria</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.estado_luminaria"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Tipo Lampara</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.tipo_lampara"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Marca Lampara</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.marca_lampara"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Modelo Lampara</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.modelo_lampara"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Estado Lampara</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.estado_lampara"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Cantidad Lamparas</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.cantidad_lamparas"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Potencia</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.potencia"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Equipo Auxiliar</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.equipo_auxiliar"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Situación Equipo Auxiliar</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.situacion_equipo_auxiliar"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Orientación</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.orientacion"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Herramienta</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.herramienta"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Número Registro</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.numero_registro"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Alta</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.alta"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Usuario Alta</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.usuario_alta"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Fecha Alta</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.fecha_alta"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Modificado</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.modificado"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Usuario Modificado</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.usuario_modificado"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Fecha Modificado</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.fecha_modificado"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Envío</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.envio"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill" class="mat-custom-field">
+                        <mat-label>Fecha Envío</mat-label>
+                        <input type="text"
+                        [ngModelOptions]="{standalone: true}" 
+                        [(ngModel)]="luminaireObj.fecha_envio"
+                        [required]="true"
+                        matInput=""
+                        #Name="ngModel"
+                        [readOnly]="editFormFlag"
+                        [disabled]="editFormFlag">
+                    </mat-form-field>
+                </div>
+                <div class="form-group my-3 col-btns">
+                    <button
+                    (click)="updateBtn()"
+                    class="btn btn-bg-green btn-system m-right" 
+                    data-dismiss="modal" 
+                    type="button"
+                    *ngIf="!this.editFormFlag">
+                        Actualizar
+                    </button>
+                    <button
+                    (click)="changeEditBtn()"
+                    class="btn btn-bg1 btn-system" 
+                    type="button">
+                        {{this.editFormFlag ? 'Editar' : 'Cancelar'}}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container-graphics mt-3">
+    <div class="row">
+        <div class="col-12 col-container d-flex justify-content-center" *ngIf="!viewSelect">
+            <mat-spinner></mat-spinner>
+        </div>
+        <div class="col-12 col-container">
+            <div class="form-group" *ngIf="viewSelect">
+                <mat-form-field appearance="fill" class="mat-custom-field">
+                    <mat-label>Atributo</mat-label>
+                    <mat-select
+                    [(ngModel)]="attrSelected"
+                    (selectionChange)="changeAttribute();">
+                        <mat-option *ngFor="let attr of attrArray" [value]="attr">
+                            {{attr.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="row col-graphics" *ngIf="attrSelected && !viewGraphics">
+                <mat-spinner ></mat-spinner>
+            </div>
+            <div class="row col-graphics">
+                <div #divGraphics></div>
+            </div>
+        </div>
+    </div>
+</div>
+

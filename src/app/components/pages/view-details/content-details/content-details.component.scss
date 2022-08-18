@@ -1,0 +1,8 @@
+@import './../../../../../assets/styles/custom';
+@import './../../../../../assets/styles/container';
+
+@include container-details;
+
+.m-right{
+    margin-right: 8px;
+}

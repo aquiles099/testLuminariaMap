@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <mat-divider></mat-divider>
+        </div>
+        <div class="col-12 col-cell-actions">
+            <button mat-icon-button
+            [ngClass]="{'btn-active': viewDetails}"
+            [matTooltip]="'Información de la luminaria'"
+            [routerLink]="['/view/details']">
+                <mat-icon class="example-tab-icon">error_outline</mat-icon>
+            </button>
+            <button mat-icon-button
+            [ngClass]="{'btn-active': viewGraphics}"
+            [matTooltip]="'Gráfico'"
+            [routerLink]="['/view/graphics']">
+                <mat-icon class="example-tab-icon">insert_chart_outlined</mat-icon>
+            </button>
+        </div>
+        <div class="col-12 mt-3">
+            <mat-divider></mat-divider>
+        </div>
+        <div class="col-12">
+            <app-content-details [infoLuminaires]="infoLuminaires" *ngIf="viewDetails && infoLuminaires"></app-content-details>
+            <app-content-graphics *ngIf="viewGraphics"></app-content-graphics>
+        </div>
+    </div>
+</div>
